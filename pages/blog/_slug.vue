@@ -43,13 +43,13 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.post.custom_excerpt
+          content: this.post?.custom_excerpt || ''
         },
         { hid: 'og:type', property: 'og:type', content: 'article' },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.post.title
+          content: this.post?.title
         },
         {
           hid: 'og:description',
@@ -59,7 +59,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.post.og_image || this.post.feature_image
+          content: this.post?.og_image || this.post?.feature_image
         },
         {
           hid: 'og:url',
@@ -69,17 +69,17 @@ export default {
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: this.post.title
+          content: this.post?.title
         },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: this.post.custom_excerpt
+          content: this.post?.custom_excerpt
         },
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: this.post.twitter_image || this.post.feature_image
+          content: this.post?.twitter_image || this.post?.feature_image
         },
         {
           hid: 'twitter:url',
@@ -89,7 +89,7 @@ export default {
         {
           hid: 'twitter:creator',
           name: 'twitter:creator',
-          content: this.post.primary_author.twitter
+          content: this.post?.primary_author.twitter
         },
         {
           hid: 'twitter:label1',
@@ -99,7 +99,7 @@ export default {
         {
           hid: 'twitter:data1',
           name: 'twitter:data1',
-          content: this.post.primary_author.name
+          content: this.post?.primary_author.name
         }
       ]
     }
